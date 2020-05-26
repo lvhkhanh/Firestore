@@ -11,6 +11,7 @@
 ### Set security rules
 ### Compound queries create manual index or try link in console log
 ### Resource constant string for collections and fields name
+### OnComplete check success or fail
 ## Tips
 ### Add indexes when use complex queries 
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#8
