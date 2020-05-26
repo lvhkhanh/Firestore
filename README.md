@@ -2,6 +2,7 @@
 ## Courses
 ### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index
 ### https://codelabs.developers.google.com/codelabs/firebase-get-to-know-web/index.html?index=..%2F..index#0
+### https://app.pluralsight.com/library/courses/firebase-android-cloud-firestore/table-of-contents
 ## Tips
 ### Add indexes when use complex queries 
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#8
