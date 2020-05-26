@@ -1,6 +1,7 @@
 # Firestore
 ## Limitations
 ### NO FULL TEXT SEARCH `SELECT * FROM colection WHERE name LIKE 'start*'`
+#### https://firebase.google.com/docs/firestore/solutions/search Algolia ElasticSearch
 ## Courses
 ### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index
 ### https://codelabs.developers.google.com/codelabs/firebase-get-to-know-web/index.html?index=..%2F..index#0
