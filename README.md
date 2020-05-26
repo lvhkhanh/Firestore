@@ -14,6 +14,7 @@
 ### Add indexes when use complex queries 
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#8
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#9
+### Datetime serilizable, auto insert if null
 ## Links
 ### https://codinginflow.com/tutorials/android/cloud-firestore/part-1-introduction
 ### https://fireship.io/lessons/firestore-array-queries-guide/
