@@ -6,6 +6,7 @@
 ## Flows
 ### Create new DB
 ### Set security rules
+### Compound queries create manual index or try link in console log
 ## Tips
 ### Add indexes when use complex queries 
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#8
