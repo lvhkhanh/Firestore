@@ -1,4 +1,6 @@
 # Firestore
+## API expired
+Need to copy new firebaseConfig from firebase console
 ## Limitations
 ### NO FULL TEXT SEARCH `SELECT * FROM colection WHERE name LIKE 'start*'`
 #### https://firebase.google.com/docs/firestore/solutions/search Algolia ElasticSearch
