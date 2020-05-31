@@ -1,4 +1,8 @@
 # Firestore
+## Install
+```
+npm i -g firebase-tools
+```
 ## API expired
 Need to copy new firebaseConfig from firebase console
 ## Limitations
