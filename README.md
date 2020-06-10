@@ -25,6 +25,16 @@ Need to copy new firebaseConfig from firebase console
 ### CRUD
 #### R
 ```
+Stream<QuerySnapshot> loadAllCustomTypes() {
+  return Firestore.instance
+      .collection('customtypes')
+      .orderBy('avgRating', descending: true)
+      .limit(50)
+      .snapshots();
+}
+// Note: It's also possible to fetch documents from Cloud Firestore once, rather than listening for real time updates using the Query.get() method.
+```
+```
 List<CustomType> getCustomTypesFromQuery(QuerySnapshot snapshot) {
   return snapshot.documents.map((DocumentSnapshot doc) {
     return CustomType.fromSnapshot(doc);
