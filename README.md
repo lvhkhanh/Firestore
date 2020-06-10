@@ -22,7 +22,20 @@ Need to copy new firebaseConfig from firebase console
 ### Compound queries create manual index or try link in console log
 ### Resource constant string for collections and fields name
 ### OnComplete check success or fail
-### CRUD
+### SOCRUD
+#### S Search
+```
+Query filteredCollection = Firestore.instance
+        .collection('restaurants')
+        .where('category', isEqualTo: 'Dim Sum');
+```
+#### O Order
+```
+Query filteredAndSortedCollection = Firestore.instance
+        .collection('restaurants')
+        .where('category', isEqualTo: 'Dim Sum')
+        .orderBy('price', descending: true);
+```
 #### C Create
 ```
 Future<void> addReview({String restaurantId, Review review}) {
