@@ -23,7 +23,39 @@ Need to copy new firebaseConfig from firebase console
 ### Resource constant string for collections and fields name
 ### OnComplete check success or fail
 ### CRUD
-#### R
+#### C Create
+```
+Future<void> addReview({String restaurantId, Review review}) {
+  final restaurant =
+      Firestore.instance.collection('restaurants').document(restaurantId);
+  final newReview = restaurant.collection('ratings').document();
+
+  return Firestore.instance.runTransaction((Transaction transaction) {
+    return transaction
+        .get(restaurant)
+        .then((DocumentSnapshot doc) => Restaurant.fromSnapshot(doc))
+        .then((Restaurant fresh) {
+      final newRatings = fresh.numRatings + 1;
+      final newAverage =
+          ((fresh.numRatings * fresh.avgRating) + review.rating) / newRatings;
+
+      transaction.update(restaurant, {
+        'numRatings': newRatings,
+        'avgRating': newAverage,
+      });
+
+      return transaction.set(newReview, {
+        'rating': review.rating,
+        'text': review.text,
+        'userName': review.userName,
+        'timestamp': review.timestamp ?? FieldValue.serverTimestamp(),
+        'userId': review.userId,
+      });
+    });
+  });
+}
+```
+#### R Read/Retrieve
 ```
 Stream<QuerySnapshot> loadAllCustomTypes() {
   return Firestore.instance
