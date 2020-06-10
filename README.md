@@ -1,4 +1,12 @@
 # Firestore
+## Officials
+### https://firebase.google.com/docs/firestore/data-model
+```
+collections
+  documents
+    fields
+    subcollections
+```
 ## Install
 ```
 npm i -g firebase-tools
@@ -115,6 +123,30 @@ Future<CustomType> getCustomType(String customTypeId) {
 ```
 ## Tips
 ### Add indexes when use complex queries 
+```
+firestore.indexes.json
+```
+```
+{
+ "indexes": [
+   {
+     "collectionGroup": "restaurants",
+     "queryScope": "COLLECTION",
+     "fields": [
+       { "fieldPath": "city", "order": "ASCENDING" },
+       { "fieldPath": "avgRating", "order": "DESCENDING" }
+     ]
+   },
+
+   ...
+
+ ]
+}
+```
+```
+firebase deploy --only firestore:indexes
+```
+#### https://firebase.google.com/docs/firestore/query-data/indexing
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#8
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#9
 ### Datetime serilizable, auto insert if null
