@@ -27,6 +27,37 @@ Need to copy new firebaseConfig from firebase console
 ### Anonymous login
 ### Create new DB
 ### Set security rules
+```
+firestore.rules
+```
+```
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Restaurants:
+    //   - Authenticated user can read
+    //   - Authenticated user can create/update (for demo)
+    //   - Validate updates
+    //   - Deletes are not allowed
+    match /restaurants/{restaurantId} {
+      allow read, create: if request.auth != null;
+      allow update: if request.auth != null
+                    && request.resource.data.name == resource.data.name
+      allow delete: if false;
+      
+      // Ratings:
+      //   - Authenticated user can read
+      //   - Authenticated user can create if userId matches
+      //   - Deletes and updates are not allowed
+      match /ratings/{ratingId} {
+        allow read: if request.auth != null;
+        allow create: if request.auth != null
+                      && request.resource.data.userId == request.auth.uid;
+        allow update, delete: if false;
+      }
+    }
+  }
+}
+```
 ### Compound queries create manual index or try link in console log
 ### Resource constant string for collections and fields name
 ### OnComplete check success or fail
