@@ -22,6 +22,15 @@ Need to copy new firebaseConfig from firebase console
 ### Compound queries create manual index or try link in console log
 ### Resource constant string for collections and fields name
 ### OnComplete check success or fail
+### CRUD
+#### R
+```
+List<CustomType> getCustomTypesFromQuery(QuerySnapshot snapshot) {
+  return snapshot.documents.map((DocumentSnapshot doc) {
+    return CustomType.fromSnapshot(doc);
+  }).toList();
+}
+```
 ## Tips
 ### Add indexes when use complex queries 
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#8
