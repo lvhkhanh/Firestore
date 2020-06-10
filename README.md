@@ -9,6 +9,7 @@ Need to copy new firebaseConfig from firebase console
 ### NO FULL TEXT SEARCH `SELECT * FROM colection WHERE name LIKE 'start*'`
 #### https://firebase.google.com/docs/firestore/solutions/search Algolia ElasticSearch
 ## Labs
+### https://codelabs.developers.google.com/codelabs/flutter-firebase/#0
 ### https://codelabs.developers.google.com/codelabs/friendlyeats-flutter/index.html?index=..%2F..index#0
 ## Courses
 ### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index
