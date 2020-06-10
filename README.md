@@ -23,7 +23,25 @@ Need to copy new firebaseConfig from firebase console
 ### Resource constant string for collections and fields name
 ### OnComplete check success or fail
 ### SOCRUD
-#### S Search
+#### S Search/Filter
+```
+Stream<QuerySnapshot> loadFilteredRestaurants(Filter filter) {
+  Query collection = Firestore.instance.collection('restaurants');
+  if (filter.category != null) {
+    collection = collection.where('category', isEqualTo: filter.category);
+  }
+  if (filter.city != null) {
+    collection = collection.where('city', isEqualTo: filter.city);
+  }
+  if (filter.price != null) {
+    collection = collection.where('price', isEqualTo: filter.price);
+  }
+  return collection
+      .orderBy(filter.sort ?? 'avgRating', descending: true)
+      .limit(50)
+      .snapshots();
+}
+```
 ```
 Query filteredCollection = Firestore.instance
         .collection('restaurants')
