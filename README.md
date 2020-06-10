@@ -58,6 +58,9 @@ service cloud.firestore {
   }
 }
 ```
+```
+firebase deploy --only firestore:rules
+```
 ### Compound queries create manual index or try link in console log
 ### Resource constant string for collections and fields name
 ### OnComplete check success or fail
