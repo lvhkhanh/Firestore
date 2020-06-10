@@ -41,6 +41,15 @@ List<CustomType> getCustomTypesFromQuery(QuerySnapshot snapshot) {
   }).toList();
 }
 ```
+```
+Future<CustomType> getCustomType(String customTypeId) {
+  return Firestore.instance
+      .collection('customtypes')
+      .document(customTypeId)
+      .get()
+      .then((DocumentSnapshot doc) => CustomType.fromSnapshot(doc));
+}
+```
 ## Tips
 ### Add indexes when use complex queries 
 #### https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index#8
