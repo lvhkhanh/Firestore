@@ -16,6 +16,7 @@ Need to copy new firebaseConfig from firebase console
 ### https://codelabs.developers.google.com/codelabs/firebase-get-to-know-web/index.html?index=..%2F..index#0
 ### https://app.pluralsight.com/library/courses/firebase-android-cloud-firestore/table-of-contents
 ## Flows
+### Anonymous login
 ### Create new DB
 ### Set security rules
 ### Compound queries create manual index or try link in console log
