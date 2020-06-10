@@ -156,6 +156,21 @@ Future<CustomType> getCustomType(String customTypeId) {
       .then((DocumentSnapshot doc) => CustomType.fromSnapshot(doc));
 }
 ```
+### Build
+```
+flutter build web
+```
+This places all the production-built assets into the build/web directory of the project.
+### Deploy
+```
+firebase.json
+```
+```
+firebase deploy --only hosting
+```
+```
+flutter clean
+```
 ## Tips
 ### Add indexes when use complex queries 
 ```
