@@ -1,13 +1,17 @@
 # Firestore
 ## Officials
+### https://firebase.google.com/docs/firestore/
 ### https://firebase.google.com/docs/firestore/security/get-started
 ### https://firebase.google.com/docs/firestore/data-model
+### https://firebase.google.com/docs/firestore/manage-data/structure-data
 ```
 collections
   documents
     fields
     subcollections
 ```
+### https://firebase.google.com/docs/firestore/client/samples-web
+### https://firebaseopensource.com/projects/firebase/friendlyeats-web/
 ## Install
 ```
 npm i -g firebase-tools
